@@ -1,0 +1,9 @@
+import os
+from langchain_openai import OpenAIEmbeddings
+
+def get_embeddings():
+    return OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
+
+def get_vector_db_path():
+    # Centralizing the directory path for persistence
+    return "./chroma_db"
